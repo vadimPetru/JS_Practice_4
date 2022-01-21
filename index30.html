@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Самостоятельная работа номер 2</title>
+</head>
+<body>
+  <script>
+    let mushroomСolor= prompt('Введите цвет гриба (белый, желтый, красный, коричневый):', '');
+    let skirt = prompt('Введите наличие юбки (есть, нет):', '');
+    switch (mushroomСolor.toUpperCase().trim()) {
+      case 'БЕЛЫЙ':
+        if(skirt.trim().toUpperCase() == 'НЕТ')
+        alert('Вы нашли белый гриб');
+        else{
+          alert('Введены неверные данные: Проверьте наличие юбки');
+        }
+        break;
+      case 'КРАСНЫЙ':
+        if(skirt.trim().toUpperCase() == 'ЕСТЬ')
+        alert('А не мухомор ли это');
+        else if(skirt.trim().toUpperCase() == 'НЕТ')
+        alert('может это подосиновик');
+        else{
+          alert('Введены неверные данные: Проверьте наличие юбки');
+        }
+        break;
+      case 'ЖЕЛТЫЙ':
+      case 'КОРИЧНЕВЫЙ':
+        alert('С грибами надо быть внимательными');
+        break;
+      default:
+        alert('Введены неверные данные:')
+        break;
+    }
+  </script>
+</body>
+</html>

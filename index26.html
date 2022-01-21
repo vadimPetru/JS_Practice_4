@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jsPractice26</title>
+</head>
+<body>
+  <script>
+     function isNumber(value) {
+        if (value.replace(/\s{2,}/g, ' ').length === 0  || isNaN(value))
+        return true;
+        else
+        return false;
+      }
+      function isInteger(num) {
+          return (num ^ 0) === num;
+        }
+      
+    let n = prompt('Введите число n:');
+    if(n.trim() == '')
+        alert('Нет вводимых данных');
+        else{
+      if (n.trim() > 170) {
+        alert('Превышено максимальное значение: IEEE754 64-разрядная версия с плавающей запятой (приблизительная): 170!');
+      }
+      else {
+        if (n < 0 || isNumber(n) || isInteger(Number(n)) == false || isInteger(n) == '12')
+          alert("Неверные данные: Факториал определён только для целых неотрицательных чисел.")
+        else {
+          let z = 1; // z хранит результат n!
+          if (n > 1) {
+            let i = 2;
+            do {
+              z = z * i;
+              i++;
+            }
+            while (i <= +n);
+          }
+
+          alert('Факториал числа ' + n + ' равен' + ' ' + z);
+        }
+      }
+        }
+    
+    
+   
+    
+
+  </script>
+</body>
+</html>

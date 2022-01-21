@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>25</title>
+</head>
+
+<body>
+  <script>
+    function isNumber(value) {
+      if (value.replace(/\s/g, '').length === 0 || isNaN(value))
+      return true;
+        else
+      return false;
+    }
+    let max = Number.MAX_SAFE_INTEGER;
+    let x = prompt('Введите число x: ', '');
+    let y = prompt('Введите число y: ', '');
+    if (Number(x) > max || Number(y) > max )
+    alert('Внутри JavaScript число представлено в виде 64-битного формата IEEE-754. Ваше число или результат слишком большое, оно переполнило 64-битное хранилище.');
+      else {
+      let z = +x;
+      i = 2;
+      while (i <= y) {
+        z = z * x;
+        i++;
+      }
+      if (x.trim() == '' || y.trim() == '')
+        alert('Нет вводимых данных');
+      else if (isNumber(x) || isNumber(y))
+        alert('Неверный ввод данных: переменные должны содержать числа');
+
+    else if (y <= 0 || x <= 0 || x % 1 != 0||  x % 1 != 0) {
+        z = Math.pow(x, y);
+        alert('Число ' + x + ' в степени ' + y + ' равно ' + z);
+      }
+    else if (Number(z) > max)
+        alert('Внутри JavaScript число представлено в виде 64-битного формата IEEE-754. Ваше число или результат слишком большое, оно переполнило 64-битное хранилище.');
+      else
+        alert('Число ' + x + ' в степени ' + y + ' равно ' + z);
+    }
+  </script>
+</body>
